@@ -1,5 +1,13 @@
+import "./Navbar.scss";
 export default function Navbar(){
     return(
-        <div className="bg-primary w-100">Navbar</div>
+        <div className="navbarWrapper">
+            <div className="search-container">
+                
+            </div>
+            <div className="toolbar">
+
+            </div>
+        </div>
     )
 }

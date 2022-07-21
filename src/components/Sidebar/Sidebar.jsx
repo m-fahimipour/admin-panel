@@ -36,7 +36,7 @@ export default function Sidebar(){
                     <li><SettingsOutlinedIcon/><Link to="">Settings</Link></li>
                     <p>USER</p>
                     <li><AccountCircleOutlinedIcon/><Link to="">Profile</Link></li>
-                    <li><LogoutOutlinedIcon/><Link to="">Loguot</Link></li>
+                    <li><LogoutOutlinedIcon/><Link to="">Logout</Link></li>
                 </ul>
             </div>
             <div className="mode">
