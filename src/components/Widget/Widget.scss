@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0.75rem;
+  padding: 0.75rem;
+  height: 110px;
+  box-shadow: 3px 3px 27px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  .leftSide,
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .leftSide {
+    .title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #b2bec3;
+    }
+    .content {
+      font-size: 1.75rem;
+    }
+    .seeDetails {
+      font-size: 0.75rem;
+      cursor: pointer;
+      border-bottom: 1px solid black;
+      width: fit-content;
+    }
+  }
+
+  .rightSide {
+    align-items: flex-end;
+
+    > :first-child {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    > :first-child.positive{
+        color: #00b894;
+    }
+
+    > :first-child.negative{
+        color: #d63031;
+    }
+
+    > :last-child{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+
+        svg{
+            font-size: 1.25rem;
+        }
+    }
+
+    .users{
+        background-color: #d6303058;
+        svg{
+            color: #c23616;
+        }
+    }
+    .orders{
+        background-color: #f6e58d6d;
+        svg{
+            color: #f9ca24;
+        }
+    }
+    .earnings{
+        background-color: #bbdc5865;
+        svg{
+            color: #6ab04c;
+        }
+    }
+    .balance{
+        background-color: #e156fd61;
+        svg{
+            color: #be2edd;
+        }
+    }
+  }
+}

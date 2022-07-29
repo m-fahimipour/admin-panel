@@ -1,0 +1,96 @@
+.containerRevenue {
+    margin: 0 0.75rem;
+    border-radius: 10px;
+    padding: 0.75rem;
+    box-shadow: 3px 3px 27px 3px rgba(0, 0, 0, 0.1);
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #dfe6e9;
+        padding-bottom: 0.75rem;
+        color: #b2bec3;
+
+        p {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #dfe6e9;
+
+        .circularbar {
+            width: 110px;
+            height: 110px;
+            padding-bottom: 0.5rem;
+
+            .CircularProgressbar-text {
+                fill: #7158e2;
+                font-size: 1rem;
+            }
+
+            .CircularProgressbar-path {
+                stroke: #7158e2;
+            }
+        }
+
+        p {
+            padding: 0.5rem 0;
+            color: #636e72;
+        }
+
+        p:nth-child(2) {
+            font-size: 1.25rem;
+        }
+
+        p:nth-child(3) {
+            font-size: 1.75rem;
+            color: #2d3436;
+        }
+
+        p:nth-child(4) {
+            font-size: 0.8rem;
+            text-align: center;
+            padding-bottom: 0;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            height: 50px;
+            color: #636e72;
+
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.positive {
+                    color: #00b894;
+                }
+
+                &.negative {
+                    color: #d63031;
+                }
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import "./Layout.scss";
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 export default function Layout() {
     return (
