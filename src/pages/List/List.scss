@@ -75,6 +75,16 @@
         color: #2c3e50;
         font-weight: 700;
       }
+      &.inStock{
+        background-color: #16a08453;
+        color: #16a085;
+        font-weight: 700;
+      }
+      &.unAvilable{
+        background-color: #c03a2b54;
+        color: #c0392b;
+        font-weight: 700;
+      }
     }
   }
 

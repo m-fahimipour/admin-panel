@@ -9,6 +9,7 @@ import {
     useGridSelector
 } from '@mui/x-data-grid';
 import { Link } from "react-router-dom";
+import {useLocation} from "react-router";
 
 
 function CostumPagination() {
@@ -38,6 +39,8 @@ function CostumPagination() {
 }
 
 export default function TableUsers({columns,rows}) {
+    const location = useLocation();
+    const inUsersLoaction = location.pathname.includes("users");
     return (
         <Grid container columns={12} height={474} margin={"1.5rem"} width={"auto"}>
             <Grid item xs={12} className="usersTable">
@@ -53,7 +56,7 @@ export default function TableUsers({columns,rows}) {
                         }
                     }
                 />
-                <div className="btn-add-user"><Link to="newuser"><span>Add New User</span></Link></div>
+                <div className="btn-add-user"><Link to={inUsersLoaction ? "newuser" : "newproduct"}><span>{inUsersLoaction ? "Add New User" : "Add New Product"}</span></Link></div>
             </Grid>
         </Grid>
 
