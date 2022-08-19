@@ -1,4 +1,4 @@
-import "./New.scss";
+import "./new.scss";
 import { Box, Grid, IconButton } from "@mui/material";
 import { Fragment, useReducer, useState } from "react";
 import { useLocation } from "react-router";
