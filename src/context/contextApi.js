@@ -1,9 +1,11 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
+import reducer, {initialState} from "./reducer";
 
-stateContext = createContext();
+
+const stateContext = createContext();
 
 export default function Provider({ children }) {
-    [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
     return <stateContext.Provider value={{ state, dispatch }}>
                 {children}
@@ -11,4 +13,22 @@ export default function Provider({ children }) {
 }
 
 
-export function useDispatch()
+export function useDispatch(){
+    const {dispatch} = useContext(stateContext);
+
+    if(!dispatch){
+        throw new Error("you must use this custom Hook and Provider Component together");
+    }
+
+    return dispatch;
+}
+
+export function useContextState(){
+    const {state} = useContext(stateContext);
+
+    if(!state){
+        throw new Error("you must use this custom Hook and Provider Component together");
+    }
+
+    return state;
+}

@@ -12,8 +12,8 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-export default function Sidebar(){
-    return(
+export default function Sidebar() {
+    return (
         <aside className="wrapperSidebar">
             <div className="logo">
                 <span>Lamadmin</span>
@@ -21,22 +21,22 @@ export default function Sidebar(){
             <div className="links">
                 <ul>
                     <p>MAIN</p>
-                    <li><DashboardIcon/><Link to="/">Dashboard</Link></li>
+                    <li><DashboardIcon /><Link to="/">Dashboard</Link></li>
                     <p>LIST</p>
-                    <li><PersonOutlineOutlinedIcon/><Link to="users">Users</Link></li>
-                    <li><StoreOutlinedIcon/><Link to="products">Products</Link></li>
-                    <li><CreditCardOutlinedIcon/><Link to="">Orders</Link></li>
-                    <li><DeliveryDiningOutlinedIcon/><Link to="">Delivery</Link></li>
+                    <li><PersonOutlineOutlinedIcon /><Link to="users">Users</Link></li>
+                    <li><StoreOutlinedIcon /><Link to="products">Products</Link></li>
+                    <li><CreditCardOutlinedIcon /><Link to="">Orders</Link></li>
+                    <li><DeliveryDiningOutlinedIcon /><Link to="">Delivery</Link></li>
                     <p>USEFUL</p>
-                    <li><BarChartOutlinedIcon/><Link to="">Stats</Link></li>
-                    <li><NotificationsNoneOutlinedIcon/><Link to="">Notification</Link></li>
+                    <li><BarChartOutlinedIcon /><Link to="">Stats</Link></li>
+                    <li><NotificationsNoneOutlinedIcon /><Link to="">Notification</Link></li>
                     <p>SERVICE</p>
-                    <li><MonitorHeartOutlinedIcon/><Link to="">System Health</Link></li>
-                    <li><PsychologyOutlinedIcon/><Link to="">Logs</Link></li>
-                    <li><SettingsOutlinedIcon/><Link to="">Settings</Link></li>
+                    <li><MonitorHeartOutlinedIcon /><Link to="">System Health</Link></li>
+                    <li><PsychologyOutlinedIcon /><Link to="">Logs</Link></li>
+                    <li><SettingsOutlinedIcon /><Link to="">Settings</Link></li>
                     <p>USER</p>
-                    <li><AccountCircleOutlinedIcon/><Link to="">Profile</Link></li>
-                    <li><LogoutOutlinedIcon/><Link to="">Logout</Link></li>
+                    <li><AccountCircleOutlinedIcon /><Link to="">Profile</Link></li>
+                    <li><LogoutOutlinedIcon /><Link to="">Logout</Link></li>
                 </ul>
             </div>
             <div className="mode">

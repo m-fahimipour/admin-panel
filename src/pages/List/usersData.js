@@ -44,14 +44,3 @@ export const columns = [
     }
 ];
 
-export const rows = [
-    { id: 1436586, img: "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Jonddarkgalaxybrainfire', email: "Jonddarkgalaxybrainfire@gmail.com", age: 35, status: "Active" },
-    { id: 2678909, img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Cersei', email: "Cersei@gmail.com", age: 42, status: "Expired" },
-    { id: 3970457, img: "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Jaime', email: "Jaime@gmail.com", age: 45, status: "Blocked" },
-    { id: 4454357, img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Arya', email: "Arya@gmail.com", age: 16, status: "Active" },
-    { id: 5345799, img: "https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Daenerys', email: "Daenerys@gmail.com", age: 25, status: "Active" },
-    { id: 6346456, img: "https://images.pexels.com/photos/220429/pexels-photo-220429.jpeg?auto=compress&cs=tinysrgb&w=1200", username: "jeremi", email: "jeremi@gmail.com", age: 75, status: "Expired" },
-    { id: 7131978, img: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Ferrara', email: "Ferrara@gmail.com", age: 44, status: "Active" },
-    { id: 8244568, img: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Rossini', email: "Rossini@gmail.com", age: 36, status: "Expired" },
-    { id: 1967892, img: "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1200", username: 'Harvey', email: "Harvey@gmail.com", age: 65, status: "Blocked" },
-];

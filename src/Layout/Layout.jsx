@@ -2,18 +2,40 @@ import "./Layout.scss";
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
-import { Grid } from "@mui/material";
+import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
+import { useLayoutEffect, useState } from "react";
+
+const theme = createTheme();
 
 export default function Layout() {
+    const isDownMd = useMediaQuery(theme.breakpoints.down("md"));
+    const [closeMenu, setCloseMenu] = useState(isDownMd);
+
+    useLayoutEffect(() => {
+        if (isDownMd) {
+            setCloseMenu(true);
+        }
+        if (!isDownMd) {
+            setCloseMenu(false);
+        }
+    }, [isDownMd])
+
     return (
-        <Grid container columns={12}>
-            <Grid item xs={12} sm={4} md={3} lg={2}>
-                <Sidebar />
-            </Grid>
-            <Grid item xs={12} sm={8} md={9} lg={10}>
-                <Navbar />
-                <Outlet />
-            </Grid>
-        </Grid>
+        <ThemeProvider theme={theme}>
+            <>
+                <div className={closeMenu ? "sidebar close-menu" : "sidebar"}>
+                    <Sidebar />
+                    <span className="button-close-menu-mobile" onClick={() => setCloseMenu(true)}>close menu</span>
+                </div>
+                <div className={closeMenu ? "back-nav-mobile-close" : "back-nav-mobile-close back-nav-mobile-open"}
+                    onClick={() => setCloseMenu(true)}
+                >
+                </div>
+                <div className="navbar-content" >
+                    <Navbar setCloseMenu={setCloseMenu} />
+                    <Outlet />
+                </div>
+            </>
+        </ThemeProvider>
     )
 }
