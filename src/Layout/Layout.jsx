@@ -20,12 +20,21 @@ export default function Layout() {
         }
     }, [isDownMd])
 
+    useLayoutEffect(() => {
+        if(closeMenu){
+            document.body.classList.remove("disable-scroll-body");
+        }
+        else{
+            document.body.classList.add("disable-scroll-body");
+        }
+    },[closeMenu])
+
     return (
         <ThemeProvider theme={theme}>
             <>
                 <div className={closeMenu ? "sidebar close-menu" : "sidebar"}>
                     <Sidebar />
-                    <span className="button-close-menu-mobile" onClick={() => setCloseMenu(true)}>close menu</span>
+                    {/* <span className="button-close-menu-mobile" onClick={() => setCloseMenu(true)}>close menu</span> */}
                 </div>
                 <div className={closeMenu ? "back-nav-mobile-close" : "back-nav-mobile-close back-nav-mobile-open"}
                     onClick={() => setCloseMenu(true)}

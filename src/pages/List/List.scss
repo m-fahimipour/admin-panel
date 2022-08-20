@@ -4,9 +4,26 @@
     justify-content: center !important;
   }
   .wrapper-username-cell {
+    transition: 0.3s ease;
     overflow: auto !important;
     scrollbar-width: none;
     scrollbar-color: #9b59b6 #6347dd;
+    &::-webkit-scrollbar{
+      height: 0;
+    }
+    &:hover::-webkit-scrollbar{
+      height: 5px;
+    }
+    &::-webkit-scrollbar-track{
+      
+      background-color: #9b59b6;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      
+      background-color: #6347dd;
+      border-radius: 10px;
+    }
     &:hover {
       scrollbar-width: thin;
     }
@@ -28,6 +45,22 @@
     overflow: auto !important;
     scrollbar-width: none;
     scrollbar-color: #9b59b6 #6347dd;
+    &::-webkit-scrollbar{
+      height: 0;
+    }
+    &:hover::-webkit-scrollbar{
+      height: 5px;
+    }
+    &::-webkit-scrollbar-track{
+      
+      background-color: #9b59b6;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      
+      background-color: #6347dd;
+      border-radius: 10px;
+    }
     &:hover {
       scrollbar-width: thin;
     }

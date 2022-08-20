@@ -38,11 +38,12 @@ export default function Sidebar() {
                     <li><AccountCircleOutlinedIcon /><Link to="">Profile</Link></li>
                     <li><LogoutOutlinedIcon /><Link to="">Logout</Link></li>
                 </ul>
+                <div className="mode">
+                    <span className="light"></span>
+                    <span className="dark"></span>
+                </div>
             </div>
-            <div className="mode">
-                <span className="light"></span>
-                <span className="dark"></span>
-            </div>
+
         </aside>
     );
 }

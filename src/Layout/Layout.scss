@@ -1,6 +1,9 @@
 .sidebar {
-  transition: 0.5s ease;
-  position: fixed;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 250px;
   z-index: 99;
   &.close-menu{
@@ -15,15 +18,15 @@
   position: absolute;
   width: calc(100% - 250px);
   right: 0;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .back-nav-mobile-close{
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
+    bottom: 0;
     width: calc(100% - 250px);
-    height: 100vh;
     transform: translateX(calc(-100% - 250px));
     transition: 0.5s ease;
     z-index: 9;
@@ -82,5 +85,9 @@
                 background-color: #7158e2;
             }
         }
+    }
+
+    .disable-scroll-body{
+      overflow-y: hidden;
     }
 }

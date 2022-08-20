@@ -1,5 +1,6 @@
 .wrapperSidebar {
-  min-height: 100vh;
+  height: 100%;
+  overflow-y: hidden;
   border-right: 1px solid #dfe6e9;
   .logo {
     height: 50px;
@@ -14,7 +15,27 @@
 
   .links {
     margin-top: 1rem;
-    padding: 0 0 0 1.25rem;
+    padding: 0 0 1rem 1.25rem;
+    height: calc(100% - 50px - 1rem);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &:hover{
+      scrollbar-width: thin;
+    }
+    &::-webkit-scrollbar{
+      width: 0;
+    }
+    &:hover::-webkit-scrollbar{
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track{
+      border-radius: 10px;
+      background-color: #f5f6fa;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: #718093;
+      border-radius: 10px;
+    }
     ul {
       padding: 0;
       p {
@@ -51,11 +72,12 @@
   }
 
   .mode {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
     margin-top: 1rem;
+    position: relative;
     .light {
+      position: absolute;
+      left: 80px;
+      bottom: -10px;
       width: 20px;
       height: 20px;
       background-color: white;
@@ -64,6 +86,9 @@
       cursor: pointer;
     }
     .dark {
+      position: absolute;
+      left: 115px;
+      bottom: -10px;
       width: 20px;
       height: 20px;
       background-color: black;
